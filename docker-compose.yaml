@@ -1,0 +1,16 @@
+version: "3"
+services:
+  redis:
+    image: myredis
+    environment:
+      REDIS_PASSWORD: ""
+    ports:
+      - 6379:6379
+  db:
+    image: mymysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - 3306:3306
+
